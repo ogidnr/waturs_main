@@ -54,11 +54,11 @@ const createReport = () => {
 	console.log(oid);
 	console.log(token);
 	sendHttpRequest('POST', 'https://survey123.arcgis.com/api/featureReport/createSampleReport/submitJob', {
-	featureLayerUrl: 'https://utility.arcgis.com/usrsvcs/servers/23241e0133054c7c8f8ccfd620383b93/rest/services/water/WatURS/FeatureServer/7',
+	featureLayerUrl: 'https://utility.arcgis.com/usrsvcs/servers/e26618d6aa804ba6aaeebb65ed87b160/rest/services/water/WatURS_TEST/FeatureServer/7',
 	queryParameters: '{"orderByFields":"||last_edited_date DESC, OBJECTID ASC","objectIds":"' + oid + '"}',
-	templateItemId: '743a3e8fdb964b7fb122a7fb01c51b52',
+	templateItemId: '731228487b7b47209d71d8f7968fb416',
 	token: token,
-	surveyItemId: '535a266d60c24f39bc282a736a576664',
+	surveyItemId: 'b12a77231ad141b7b4c675f5ac83f511',
 	//outputFormat: 'pdf'
 	})
 		.then(responseData => {
